@@ -1,5 +1,3 @@
-
-
 module aws_wordpress {
     source              = "./modules/latest"
     database_name           = "wordpress_db"   // database name
@@ -7,12 +5,12 @@ module aws_wordpress {
     // Password here will be used to create master db user.It should be chnaged later
     database_password = "PassWord4-user" //password for user database
     shared_credentials_file = "~/.aws/credentials"         //Access key and Secret key file location
-    region                  = "ap-southeast-2" //sydney region
+    region                  = "us-east-1" //virginia region
     IsUbuntu                = true             // true for ubuntu,false for linux 2  //boolean type
     // avaibility zone and their CIDR
-    AZ1          = "ap-southeast-2a" // for EC2
-    AZ2          = "ap-southeast-2b" //for RDS 
-    AZ3          = "ap-southeast-2c" //for RDS
+    AZ1          = "us-east-1a" // for EC2
+    AZ2          = "us-east-1b" //for RDS 
+    AZ3          = "us-east-1c" //for RDS
     VPC_cidr     = "10.0.0.0/16"     // VPC CIDR
     subnet1_cidr = "10.0.1.0/24"     // Public Subnet for EC2
     subnet2_cidr = "10.0.2.0/24"     //Private Subnet for RDS
